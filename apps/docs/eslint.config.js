@@ -1,4 +1,15 @@
-import { nextJsConfig } from "@sbjang/eslint-config/next-js";
-
-/** @type {import("eslint").Linter.Config} */
-export default nextJsConfig;
+import {
+    baseConfig,
+    importConfig,
+    nextJsConfig,
+    reactConfig,
+  } from '@sbjang/eslint-config';
+  
+  /** @type {import("eslint").Linter.Config} */
+  export default [
+    ...baseConfig,
+    ...importConfig,
+    ...reactConfig,
+    ...nextJsConfig,
+  ];
+  

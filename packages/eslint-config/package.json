@@ -4,22 +4,64 @@
   "type": "module",
   "private": true,
   "exports": {
-    "./base": "./base.js",
-    "./next-js": "./next.js",
-    "./react-internal": "./react-internal.js"
+    ".": "./src/index.js",
+    "./base": "./src/config/base.js",
+    "./nextjs": "./src/config/nextjs.js",
+    "./react": "./src/config/react.js",
+    "./turbo": "./src/config/turbo.js",
+    "./prettier": "./src/config/prettier-config.js",
+    "./import": "./src/config/import.js",
+    "./jest": "./src/config/jest.js",
+    "./mdx": "./src/config/mdx.js",
+    "./playwright": "./src/config/playwright.js",
+    "./react-query": "./src/config/react-query.js",
+    "./react-testing-library": "./src/config/react-testing-library.js",
+    "./storybook": "./src/config/storybook.js",
+    "./tailwind": "./src/config/tailwind.js",
+    "./vitest": "./src/config/vitest.js"
+  },
+  "dependencies": {
+    "@next/eslint-plugin-next": "15.0.3",
+    "@tanstack/eslint-plugin-query": "5.62.1",
+    "@vitest/eslint-plugin": "1.1.14",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-css-import-order": "1.1.0",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-jest": "28.9.0",
+    "eslint-plugin-mdx": "3.1.5",
+    "eslint-plugin-playwright": "2.1.0",
+    "eslint-plugin-react": "7.37.2",
+    "eslint-plugin-react-hooks": "5.0.0",
+    "eslint-plugin-storybook": "0.11.1",
+    "eslint-plugin-tailwindcss": "3.17.5",
+    "eslint-plugin-testing-library": "7.0.0",
+    "eslint-plugin-turbo": "2.3.3",
+    "globals": "15.13.0",
+    "typescript-eslint": "8.16.0"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^15",
-    "@typescript-eslint/eslint-plugin": "^8.15.0",
-    "@typescript-eslint/parser": "^8.15.0",
     "eslint": "catalog:",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-only-warn": "^1.1.0",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-turbo": "^2.3.0",
-    "globals": "^15.12.0",
-    "typescript": "catalog:",
-    "typescript-eslint": "^8.15.0"
+    "prettier": "catalog:",
+    "react": "catalog:react18",
+    "react-dom": "catalog:react18",
+    "typescript": "catalog:"
+  },
+  "peerDependencies": {
+    "eslint": "catalog:",
+    "prettier": ">=catalog:",
+    "react": ">=catalog:react18",
+    "react-dom": ">=catalog:react18",
+    "typescript": "catalog:"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
   }
 }
