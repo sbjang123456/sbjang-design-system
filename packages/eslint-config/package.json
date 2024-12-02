@@ -20,6 +20,9 @@
     "./tailwind": "./src/config/tailwind.js",
     "./vitest": "./src/config/vitest.js"
   },
+  "scripts": {
+    "lint": "eslint ."
+  },
   "dependencies": {
     "@next/eslint-plugin-next": "15.0.3",
     "@tanstack/eslint-plugin-query": "5.62.1",
