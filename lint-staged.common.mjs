@@ -1,6 +1,9 @@
 // @ts-check
 
 import path from 'path';
+const escape = await import('shell-quote').then((m) => m.quote);
+
+const isWin = process.platform === 'win32';
 
 const eslintGlobalRulesForFix = ['react-hooks/exhaustive-deps: off'];
 
@@ -40,6 +43,9 @@ const getEslintFixCmd = ({
  * @param {string[]} filenames
  * @returns {string}
  */
-const concatFilesForPrettier = (filenames) => filenames.join(' ');
+const concatFilesForPrettier = (filenames) =>
+  filenames
+    .map((filename) => `"${isWin ? filename : escape([filename])}"`)
+    .join(' ');
 
 export { concatFilesForPrettier, getEslintFixCmd };
