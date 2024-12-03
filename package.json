@@ -1,5 +1,5 @@
 {
-  "name": "sbjang-design-system",
+  "name": "turbo-monorepo-template",
   "private": true,
   "scripts": {
     "build": "turbo build",
