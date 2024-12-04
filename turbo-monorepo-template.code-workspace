@@ -1,0 +1,58 @@
+{
+  "folders": [
+    {
+      "name": "🌳 root",
+      "path": ".",
+    },
+    {
+      "name": "🍂 docs",
+      "path": "apps/docs",
+    },
+    {
+      "name": "🍂 web",
+      "path": "apps/web",
+    },
+    {
+      "name": "⚙️ eslint-config",
+      "path": "packages/eslint-config",
+    },
+    {
+      "name": "⚙️ typescript-config",
+      "path": "packages/typescript-config",
+    },
+    {
+      "name": "📦 ui",
+      "path": "packages/ui",
+    },
+  ],
+  "extensions": {
+    "recommendations": [
+      "folke.vscode-monorepo-workspace",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+    ],
+  },
+  "settings": {
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit",
+    },
+    // Disable vscode formatting for js,jsx,ts,tsx files
+    // to allow dbaeumer.vscode-eslint to format them
+    "[javascript]": {
+      "editor.formatOnSave": false,
+    },
+    "eslint.alwaysShowStatus": true,
+    // https://github.com/Microsoft/vscode-eslint#mono-repository-setup
+    "eslint.workingDirectories": [
+      "./apps/docs",
+      "./apps/web",
+      "./packages/eslint-config",
+      "./packages/typescript-config",
+      "./packages/ui",
+    ],
+  },
+}
